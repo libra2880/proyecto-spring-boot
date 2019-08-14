@@ -29,7 +29,7 @@ public class Tienda {
 	 private String direccion;
 	 
 	 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="nid")
 	private Negocio negocio;
 	

@@ -27,7 +27,7 @@ public class Provincia {
 	@OneToMany(targetEntity=Distrito.class,mappedBy="provincia",fetch=FetchType.LAZY,cascade=CascadeType.ALL)
 	private Set<Distrito> distrito;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="iddepartamento")
 	private Departamento departamento;
 

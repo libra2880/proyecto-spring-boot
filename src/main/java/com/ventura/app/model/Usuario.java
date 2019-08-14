@@ -27,7 +27,7 @@ public class Usuario extends AbstractPersistable<Long> {
 	
 	private String clave;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="rol_id")
 	private Rol rol;
 	

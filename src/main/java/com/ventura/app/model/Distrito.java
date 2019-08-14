@@ -2,6 +2,7 @@ package com.ventura.app.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,7 +20,7 @@ public class Distrito {
 	@Column(name = "nomdistrito", nullable = false, length = 40)
 	private String nomdistrito;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idprovincia")
 	private Provincia provincia;
 

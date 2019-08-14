@@ -2,6 +2,7 @@ package com.ventura.app.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,11 +17,11 @@ public class EmpleadoGrupo {
     @Column(name = "idempleadogrupo", updatable = false, nullable = false,unique=true)
 	private Long idempleadogrupo;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idempleado")
 	private Empleado empleado;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idgrupo")
 	private Grupo grupo;
 	

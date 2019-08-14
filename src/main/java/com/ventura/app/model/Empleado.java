@@ -83,32 +83,32 @@ public class Empleado implements Serializable{
 	
 	
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idtipoempleado")
 	private TipoEmpleado tipoempleado;
 	
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idniveleducacion")
 	private NivelEducacion niveleducacion;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idestadocivil")
 	private EstadoCivil estadocivil;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idgenero")
 	private Genero genero;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="tid")	
 	private Tienda tienda;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idtipodocu")	
 	private TipoDocumento tipodocumento;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idgradoins")	
 	private GradoInstruccion gradoinstruccion;
 	
