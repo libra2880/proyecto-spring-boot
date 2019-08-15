@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import com.ventura.app.filter.CustomFilter;
 import com.ventura.app.filter.SimpleAuthenticationFilter;
 import com.ventura.app.model.Usuario;
-import com.ventura.app.service.impl.MyUsuarioDetalleService;
+import com.ventura.app.service.MyUsuarioDetalleService;
 
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 

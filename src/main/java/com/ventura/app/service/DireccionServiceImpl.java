@@ -1,4 +1,4 @@
-package com.ventura.app.service.impl;
+package com.ventura.app.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import com.ventura.app.model.Direccion;
 import com.ventura.app.repository.DireccionRepository;
 import com.ventura.app.repository.UsuarioRepository;
-import com.ventura.app.service.DireccionService;
 
 @Service
 public class DireccionServiceImpl implements DireccionService{

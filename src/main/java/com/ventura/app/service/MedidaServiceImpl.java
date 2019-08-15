@@ -1,4 +1,4 @@
-package com.ventura.app.service.impl;
+package com.ventura.app.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.ventura.app.model.Medida;
 import com.ventura.app.repository.MedidaRepository;
-import com.ventura.app.service.MedidaService;
 
 
 @Service

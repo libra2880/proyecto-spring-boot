@@ -1,4 +1,4 @@
-package com.ventura.app.service.impl;
+package com.ventura.app.service;
 
 import java.util.List;
 
@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.ventura.app.model.Factura;
 import com.ventura.app.repository.FacturaRepository;
-import com.ventura.app.service.FacturaService;
 
 @Service
 public class FacturaServiceImpl implements FacturaService {

@@ -1,4 +1,4 @@
-package com.ventura.app.service.impl;
+package com.ventura.app.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,6 @@ import com.ventura.app.model.Departamento;
 import com.ventura.app.model.Pais;
 import com.ventura.app.repository.DepartamentoRepository;
 import com.ventura.app.repository.PaisRepository;
-import com.ventura.app.service.DepartamentoService;
 
 @Service("departamentoService")
 

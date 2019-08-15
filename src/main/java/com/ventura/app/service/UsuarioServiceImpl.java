@@ -1,4 +1,4 @@
-package com.ventura.app.service.impl;
+package com.ventura.app.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +11,6 @@ import com.ventura.app.model.Rol;
 import com.ventura.app.model.Usuario;
 import com.ventura.app.repository.RolRepository;
 import com.ventura.app.repository.UsuarioRepository;
-import com.ventura.app.service.UsuarioService;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService {

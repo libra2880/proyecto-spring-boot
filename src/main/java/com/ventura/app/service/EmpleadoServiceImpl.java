@@ -1,4 +1,4 @@
-package com.ventura.app.service.impl;
+package com.ventura.app.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +10,6 @@ import com.ventura.app.model.Empleado;
 import com.ventura.app.model.Grupo;
 import com.ventura.app.repository.EmpleadoRepository;
 import com.ventura.app.repository.GrupoRepository;
-import com.ventura.app.service.EmpleadoService;
 
 @Service
 public class EmpleadoServiceImpl implements EmpleadoService{

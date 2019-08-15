@@ -1,4 +1,4 @@
-package com.ventura.app.service.impl;
+package com.ventura.app.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +10,6 @@ import com.ventura.app.model.Departamento;
 import com.ventura.app.model.Provincia;
 import com.ventura.app.repository.DepartamentoRepository;
 import com.ventura.app.repository.ProvinciaRepository;
-import com.ventura.app.service.ProvinciaService;
 
 @Service
 public class ProvinciaServiceImpl implements ProvinciaService{

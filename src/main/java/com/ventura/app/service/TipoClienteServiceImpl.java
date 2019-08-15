@@ -1,4 +1,4 @@
-package com.ventura.app.service.impl;
+package com.ventura.app.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.ventura.app.model.TipoCliente;
 import com.ventura.app.repository.TipoClienteRepository;
-import com.ventura.app.service.TipoClienteService;
 
 @Service
 public class TipoClienteServiceImpl implements TipoClienteService{
