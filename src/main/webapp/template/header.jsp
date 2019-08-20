@@ -67,7 +67,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="${path}/venta/ventas">Ventas</a>
-       
+       	  <a class="dropdown-item" href="${path}/venta/cliente">Clientes</a> 
         </div>
       </li>
       
@@ -121,7 +121,7 @@
            <a class="dropdown-item" href="#">Empresa</a>
            <a class="dropdown-item" href="#">Productos</a>
            <a class="dropdown-item" href="#">Categorias</a>
-           <a class="dropdown-item" href="${path}/mantenimiento/cliente">Clientes</a> 
+          
            <a class="dropdown-item" href="#">Proveedores</a> 
            <a class="dropdown-item" href="#">Forma de pago</a>
            <a class="dropdown-item" href="#">Bancos</a>

@@ -16,8 +16,8 @@ public class TipoComprobante {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "codigo", updatable = false, nullable = false,unique=true)
-	private Long codigo;
+    @Column(name = "idtipocomprobante", updatable = false, nullable = false,unique=true)
+	private Long idtipocomprobante;
 	
 	@Column(name="descripcion",nullable=false,length=40)
 	private String descripcion;
@@ -30,12 +30,13 @@ public class TipoComprobante {
 	
 	
 
-	public Long getCodigo() {
-		return codigo;
+	
+	public Long getIdtipocomprobante() {
+		return idtipocomprobante;
 	}
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
+	public void setIdtipocomprobante(Long idtipocomprobante) {
+		this.idtipocomprobante = idtipocomprobante;
 	}
 
 	public String getDescripcion() {

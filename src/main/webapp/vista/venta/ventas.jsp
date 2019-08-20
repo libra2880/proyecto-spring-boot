@@ -27,7 +27,7 @@
 			<div class="col-md-12">
 				<div class="card card-outline-secondary">
 					<div class="card-body">
-						<form:form action="${path}/venta/numeracion" method="POST"  modelAttribute="<facturas>,<numFactura>">
+						<form:form action="${path}/venta/numeracion" method="POST"  modelAttribute="<facturas>,<numFactura>,<tcomprobantes>">
 							<div class="form-group row">
 								<label for="codigo" class="control-label col-md-2">Codigo</label>
 								<div class="col-md-2">
@@ -44,9 +44,9 @@
 
 								<div class="col-md-2">
 									<select name="tipocomprobante" id="tipocomprobante" required>
-										<c:forEach items="comprobantes" var="comprobante">
-
-											<option value="">Elige comprobante</option>
+												<option value="-1">Comprobante</option>
+										<c:forEach items="${tcomprobantes}" var="tipocomprobante">
+											<option value="${tipocomprobante.idtipocomprobante}">${tipocomprobante.descripcion}</option>
 										</c:forEach>
 									</select>
 								</div>

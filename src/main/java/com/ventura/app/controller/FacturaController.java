@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ventura.app.model.Factura;
+import com.ventura.app.model.TipoComprobante;
 import com.ventura.app.service.FacturaService;
+import com.ventura.app.service.TipoComprobanteService;
 
 @RequestMapping("/venta")
 @Controller
@@ -22,14 +24,18 @@ import com.ventura.app.service.FacturaService;
 public class FacturaController {
 
 	private FacturaService facturaService;
+	
+	private TipoComprobanteService tipoComprobanteService;
 
+
+	
+	
 	@Autowired
-	public FacturaController(FacturaService facturaService) {
-
+	public FacturaController(FacturaService facturaService, TipoComprobanteService tipoComprobanteService) {
+		
 		this.facturaService = facturaService;
+		this.tipoComprobanteService = tipoComprobanteService;
 	}
-	
-	
 
 	@PostMapping("/ventas")
 	public String numeracion(Model model,@Valid @ModelAttribute("numfact") Long numfact,@Valid @ModelAttribute("codigo") Long codigo,
@@ -81,8 +87,11 @@ public class FacturaController {
 	}
 
 	@GetMapping("/ventas")
-	public String facturaLista(Model model, @ModelAttribute("facturas") Factura factura,
-			@ModelAttribute("numFactura") Long numFactura) {
+	public String facturaLista(Model model, 
+			@ModelAttribute("facturas") Factura factura,
+			@ModelAttribute("tcomprobantes") TipoComprobante tcomprobantes,
+			@ModelAttribute("numFactura") Long numFactura)
+	 {
 
 		numFactura = 2L;
 		try {
@@ -97,6 +106,7 @@ public class FacturaController {
 
 				model.addAttribute("numFactura", numFactura);
 				model.addAttribute("facturas", facturaService.facturaLista());
+				model.addAttribute("tcomprobantes",tipoComprobanteService.lTComprobante());
 				return "venta/ventas";
 			} else {
 
@@ -104,6 +114,7 @@ public class FacturaController {
 				numFactura = Long.valueOf(factura.getNumfact() + 1);
 				model.addAttribute("facturas", facturaService.facturaLista());
 				model.addAttribute("numFactura", numFactura);
+				model.addAttribute("tcomprobantes",tipoComprobanteService.lTComprobante());
 				return "venta/ventas";
 			}
 
@@ -111,6 +122,7 @@ public class FacturaController {
 
 		}
 		//comprobante(model, new Factura(), numFactura);
+		model.addAttribute("tcomprobantes",tipoComprobanteService.lTComprobante());
 		return "venta/ventas";
 
 	}

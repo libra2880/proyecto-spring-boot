@@ -19,12 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Departamento implements Serializable {
 	
-	
-
-
 	private static final long serialVersionUID = 1L;
-	
-	
 	
 
 	public Departamento() {
@@ -50,11 +45,10 @@ public class Departamento implements Serializable {
 	@OneToMany(targetEntity=Provincia.class,mappedBy="departamento",fetch=FetchType.LAZY,cascade=CascadeType.ALL)
 	private Set<Provincia> provincia;
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY,cascade = CascadeType.ALL)
 	@JoinColumn(name="idpais")
-	@JsonIgnore
-	private Pais pais;
 	
+	private Pais pais;	
 
 	public Long getIddepartamento() {
 		return iddepartamento;

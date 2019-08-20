@@ -16,6 +16,7 @@
 <script type="text/javascript" src="${path}/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="${path}/js/popper.min.js"></script>
 <script type="text/javascript" src="${path}/js/main.js"></script>
+<script type="text/javascript" src="${path}/js/jquery.validate.min.js"></script>
 </head>
 <body>
 		<br>
@@ -74,7 +75,7 @@
 			
 			</div>	
 	<div class="myForm3">
- 	 	<form:form  action="${path}/mantenimiento/agregarcliente" method="post"  modelAttribute="<clientes>,<tipoclientes>">
+ 	 	<form:form  action="${path}/venta/agregarcliente" method="post"  modelAttribute="<clientes>,<tipoclientes>">
  	 		<div class="modal fade" id="exampleModal" 
 		tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		
@@ -208,9 +209,7 @@
 													</div>
 												</div>
 												<div class="form-group row">
-
 													<label for="pais" class="control-label col-md-2">Pais</label>
-
 													<div class="col-md-2">
 														<select name="comboboxPais" id="comboboxPais" required>
 															<option value="-1">Seleccione Pais</option>
@@ -219,15 +218,12 @@
 															</c:forEach>
 														</select>
 													</div>
-
 													<label for="departamento" class="control-label col-md-2">Departamento</label>
 
 													<div class="col-md-2">
 														<select name="comboboxDepartamento" id="comboboxDepartamento" required>
-															<option value="0">Seleccione Departamento</option>
-															<c:forEach items="${departamentos}" var="departamento">
-																<option value="${departamento.iddepartamento}">${departamento.nomdepartamento}</option>
-															</c:forEach>
+													     <option value="0">Seleccione Departamento</option> 
+															
 														</select>
 													</div>
 												</div>

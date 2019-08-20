@@ -240,7 +240,7 @@ $(document).ready(function(){
 			 
 		
 		$.get(href,function(tipocomprobante,status){
-			$('.myForm7 #codigo').val(tipocomprobante.codigo);
+			$('.myForm7 #codigo').val(tipocomprobante.idtipocomprobante);
 			$('.myForm7 #descripcion').val(tipocomprobante.descripcion);
 		
 			$('.myForm7 #abrev').val(tipocomprobante.abrev);
@@ -451,6 +451,36 @@ $(document).ready(function(){
 	});
 });
 
+$(document).ready(function(){
 
-
+	$('#comboboxPais').on('change', function(){
+		
+		var idPais= $('#comboboxPais option:selected').val();
+			alert(idPais);
+		$.ajax({
+			
+				type:'GET',
+				url:'${pageContext.request.contextPath }/venta/cargarPais/' + idPais +'.html',
+						
+				success: function(result){				
+					
+					var result=JSON.parse(result);
+					var s= '';					
+					for(var i=0; i< result.length; i++){
+						
+		s += '<option value="' + result[i].iddepartamento + '" >' + result[i].nomdepartamento + '</option>';
+					}
+					  $('#comboboxDepartamento').html(s);
+					  
+					  alert('success');
+					
+				},
+				 error: function(ob,errStr) {
+				        alert('onfailure');
+				     
+				    }
+		});			
+		
+	});
+});
 

@@ -25,11 +25,7 @@ public class DepartamentoServiceImpl implements DepartamentoService {
 	private PaisRepository paisRepository;
 	
 	
-	private DepartamentoRepository departamentoRepository;
-	
-	
-	
-	
+	private DepartamentoRepository departamentoRepository;	
 
 	@Autowired
 	public DepartamentoServiceImpl(PaisRepository paisRepository, DepartamentoRepository departamentoRepository) {

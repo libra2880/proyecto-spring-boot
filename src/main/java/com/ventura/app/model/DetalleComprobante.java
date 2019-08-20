@@ -60,6 +60,10 @@ public class DetalleComprobante implements Serializable {
 	public void setDescuento(Double descuento) {
 		this.descuento = descuento;
 	}
+	
+	public Double CalcularImporte() {
+		return peso * producto.getPrecioventa();
+	}
 
 
 
